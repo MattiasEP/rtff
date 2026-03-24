@@ -124,7 +124,8 @@ arrow_menu_interactive() {
         printf "\033[2K\n"
       done
       printf "\033[%sA" "${total}"
-      shout_success "$(printf "${success_fmt}" "${MENU_SELECTED}")"
+      # success_fmt is always one %s; avoid SC2059 (variable as printf format)
+      shout_success "${success_fmt//%s/${MENU_SELECTED}}"
       return 0
     elif [ "${key}" = "q" ] || [ "${key}" = "Q" ]; then
       printf "\033[%sA" "${total}"

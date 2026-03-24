@@ -7,17 +7,20 @@ SOURCE_SCRIPT="${SCRIPT_DIR}/rtff"
 TARGET_DIR="${HOME}/bin"
 TARGET_SCRIPT="${TARGET_DIR}/rtff"
 SHELL_RC="${HOME}/.zshrc"
-PATH_LINE='export PATH="$HOME/bin:$PATH"'
+PATH_LINE="export PATH=\"\$HOME/bin:\$PATH\""
 
 path_already_set() {
   local file="$1"
 
   if command -v rg >/dev/null 2>&1; then
+    # Regex matches literal $ in .zshrc (not shell expansion here)
+    # shellcheck disable=SC2016
     rg -q '(^|\s)export PATH="\$HOME/bin:\$PATH"' "${file}"
     return $?
   fi
 
   if command -v grep >/dev/null 2>&1; then
+    # shellcheck disable=SC2016
     grep -Eq '(^|[[:space:]])export PATH="\$HOME/bin:\$PATH"' "${file}"
     return $?
   fi
