@@ -74,7 +74,7 @@ say() {
 }
 
 say_release_goodbye() {
-  echo "${C_YELLOW}See you in Tokyo, bitch!${C_RESET}"
+  echo "${C_YELLOW}✈️ See you in Tokyo, bitch!${C_RESET}"
 }
 
 shout_success() {

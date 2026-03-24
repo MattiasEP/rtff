@@ -38,6 +38,7 @@ rtff
 
 ## Demo
 
+![RTFF demo](docs/demo.gif)
 
 ## What It Does
 
@@ -80,7 +81,7 @@ rtff
 
 ## Notes
 
-- On successful tag flow exit, RTFF signs off with `See you in Tokyo, bitch!`
+- On successful tag flow exit, RTFF signs off with `✈️ See you in Tokyo, bitch!`
 - Set **`NO_COLOR`** (to any value) to disable ANSI colors — same idea as [no-color.org](https://no-color.org/).
 - Designed for interactive terminal use.
 - Non-interactive mode has fallback behavior for menu selection.
