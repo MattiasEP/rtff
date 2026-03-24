@@ -8,6 +8,8 @@ Heavy-metal CLI for tag releases.
 
 `rtff` helps you forge and push semver tags without leaving the terminal solo.
 
+**Requirements:** Bash and Git (macOS/Linux/WSL).
+
 ## Why This Exists
 
 Tagging releases in Git is simple, but doing it cleanly every single time is not.
@@ -92,3 +94,7 @@ rtff
 - Semver support is intentionally strict to `vX.Y.Z` or `X.Y.Z`.
 - First commit flow stages all files when you confirm.
 - Push assumes you want one remote per release action (selectable when multiple exist).
+
+## License
+
+MIT — see [LICENSE](LICENSE).
